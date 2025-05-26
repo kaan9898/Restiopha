@@ -32,31 +32,4 @@ public class ItemService {
                 .filter(item -> item.getType() == Item.ItemType.SHOES)
                 .collect(Collectors.toList());
     }
-    public Item generateRandomLoot() {
-        Random random = new Random();
-        double roll = random.nextDouble();
-        if (roll <= 0.5) {
-            return getRandomSword();
-        } else {
-            return getRandomShoes();
-        }
-    }
-
-    private Item getRandomSword() {
-        int variant = new Random().nextInt(3);
-        return switch (variant) {
-            case 0 -> Item.RUSTY_BLADE;
-            case 1 -> Item.KNIGHTS_EDGE;
-            default -> Item.CRYSTAL_SWORD;
-        };
-    }
-
-    private Item getRandomShoes() {
-        int variant = new Random().nextInt(3);
-        return switch (variant) {
-            case 0 -> Item.WORN_SHOES;
-            case 1 -> Item.LEATHER_BOOTS;
-            default -> Item.PHANTOM_STEPS;
-        };
-    }
 }
