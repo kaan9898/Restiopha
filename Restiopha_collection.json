@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "49d46912-1781-436d-b92a-889dc009551b",
+		"name": "Restiopha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39313262"
+	},
+	"item": [
+		{
+			"name": "getAllSwords",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/items/swords"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllShoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/items/shoes"
+			},
+			"response": []
+		},
+		{
+			"name": "getMap",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/map/getMap"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllMonsters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/monsters/getAllMonsters"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/monsters/59",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/monsters/59"
+			},
+			"response": []
+		},
+		{
+			"name": "createMonster",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"NewMonster\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/monsters/createMonster"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMonster",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/api/monsters/59"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllAlive",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlayers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/players/getAllPlayers"
+			},
+			"response": []
+		},
+		{
+			"name": "getPlayerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/players/2"
+			},
+			"response": []
+		},
+		{
+			"name": "createPlayer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"kaan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/players/createPlayer"
+			},
+			"response": []
+		},
+		{
+			"name": "/{playerId}/move",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/players/2/move?direction=DOWN",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players",
+						"2",
+						"move"
+					],
+					"query": [
+						{
+							"key": "direction",
+							"value": "DOWN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/{playerId}/attack/{monsterId}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "localhost:8080/api/players/2/attack/112"
+			},
+			"response": []
+		},
+		{
+			"name": "equipItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/players/2/equip?itemId=1&itemType=SWORD",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players",
+						"2",
+						"equip"
+					],
+					"query": [
+						{
+							"key": "itemId",
+							"value": "1"
+						},
+						{
+							"key": "itemType",
+							"value": "SWORD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sellitem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/players/2/sell?itemId=2&itemType=SWORD",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players",
+						"2",
+						"sell"
+					],
+					"query": [
+						{
+							"key": "itemId",
+							"value": "2"
+						},
+						{
+							"key": "itemType",
+							"value": "SWORD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/players/2/inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "level",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/players/2/level?playerId=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"players",
+						"2",
+						"level"
+					],
+					"query": [
+						{
+							"key": "playerId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
